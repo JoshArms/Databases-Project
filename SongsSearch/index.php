@@ -67,8 +67,9 @@
                   INNER JOIN Contributors ON Contributors.ID = SongsBy.ContributorID
                   INNER JOIN Versions ON Versions.SongID = Songs.ID
                   WHERE
-                  Contributors.name = :search OR
-                  Songs.title = :search ;';
+                  Contributors.name LIKE CONCAT("%",:search,"%") OR
+                  Songs.title LIKE CONCAT("%",:search,"%") ;';
+        echo $query;
         $sth = $db->prepare($query);
         $sth->bindParam(':search', $_POST['search']);
         $sth->execute();
