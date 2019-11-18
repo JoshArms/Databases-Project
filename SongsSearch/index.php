@@ -69,7 +69,6 @@
                   WHERE
                   Contributors.name LIKE CONCAT("%",:search,"%") OR
                   Songs.title LIKE CONCAT("%",:search,"%") ;';
-        echo $query;
         $sth = $db->prepare($query);
         $sth->bindParam(':search', $_POST['search']);
         $sth->execute();
