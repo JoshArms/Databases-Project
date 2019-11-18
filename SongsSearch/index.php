@@ -1,6 +1,11 @@
 <html>
   <head>
     <title>Search Songs</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
     <div>
@@ -30,10 +35,15 @@
         $sth->bindParam(':search', $_POST['search']);
         $sth->execute();
         $stmt = $sth->fetchAll();
+        echo '<table>';
+        echo '<tr><th></th><th>Title</th><th>Version</th></tr>';
         foreach($stmt as $sid){
-          echo '<br/><a href="./add/index.php?version='.$sid['File'].'">Add to Queue</a> - ';
-          echo $sid['title'] . ' ---- ' . $sid['File'];
+          echo '<tr>';
+          echo '<td><a href="./add/index.php?version='.$sid['File'].'">Add to Queue</a></td>';
+          echo '<td>' . $sid['title'] . '</td> <td> ' . $sid['File'] . '</td>';
+          echo '</tr>';
         }
+        echo '</table>';
       ?>
     </div>
   </body>
