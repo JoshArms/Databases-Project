@@ -7,16 +7,36 @@
     		background-repeat: no-repeat;
     		background-attachment: fixed;
     		background-size: cover;
+        color: #FFFFFF;
   	  }
+      .container{
+        text-align: center;
+      }
+      .nav{
+        color: white;
+        background: gray;
+      }
+      .nav:hover{
+        color: gray;
+        background: white;
+      }
+      a{
+        color: white;
+      }
+      a:hover{
+        color: gray;
+      }
     </style>
   </head>
   <body>
+    <div class="container">
     <div>
       <h1>Karaoke Group Project</h1>
     </div>
     <div>
-      <a href="./DJ/">DJ Page</a><br/>
-      <a href="./SearchSongs/">Search Songs</a>
+      <a class="nav" href="./DJ/">DJ Page</a><br/>
+      <a class="nav" href="./SearchSongs/">Search Songs</a>
     </div>
+  </div>
   </body>
 </html>
