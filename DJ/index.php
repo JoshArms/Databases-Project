@@ -4,7 +4,14 @@
     <style>
       table, th, td {
         border: 1px solid black;
+		    color: #FFFFFF;
       }
+      body {
+    		background-image: url('https://i.pinimg.com/originals/84/fb/da/84fbdac0f75c9293a5b1cf58361d88f6.jpg');
+    		background-repeat: no-repeat;
+    		background-attachment: fixed;
+    		background-size: cover;
+  	  }
     </style>
   </head>
   <body>
